@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="timer-app">
+        <div class="timer">
+            <svg class="progress-ring" width="300" height="300">
+                <circle class="progress-ring__background" r="140" cx="150" cy="150" />
+                <circle class="progress-ring__circle" r="140" cx="150" cy="150" />
+            </svg>
+            <div class="time-display">
+                <span id="timer-display">00:00</span>
+            </div>
+        </div>
+        <div class="controls">
+            <input type="number" id="input-minutes" placeholder="Minutes" min="0" max="99">
+            <input type="number" id="input-seconds" placeholder="Seconds" min="0" max="59">
+            <button id="start-pause">Start</button>
+            <button id="reset" disabled>Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

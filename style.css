@@ -1,0 +1,105 @@
+/* Basic body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle, #1e1e2f, #27293d);
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+}
+
+/* Timer app container */
+.timer-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Timer circle and SVG setup */
+.timer {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring__background {
+    fill: none;
+    stroke: #444;
+    stroke-width: 12;
+}
+
+.progress-ring__circle {
+    fill: none;
+    stroke: #4caf50;
+    stroke-width: 12;
+    stroke-dasharray: 880; /* 2 * Math.PI * radius */
+    stroke-dashoffset: 880;
+    transition: stroke-dashoffset 1s linear;
+}
+
+/* Timer display setup */
+.time-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+/* Input fields for setting the timer */
+input {
+    width: 80px;
+    padding: 8px;
+    margin: 5px;
+    font-size: 1rem;
+    border: 2px solid #4caf50;
+    border-radius: 5px;
+    background: #1e1e2f;
+    color: #fff;
+    text-align: center;
+    outline: none;
+}
+
+/* Styling for control buttons */
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#start-pause {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+#reset {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
